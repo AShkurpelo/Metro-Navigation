@@ -1,0 +1,32 @@
+﻿<Window x:Class="Metro.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Metro"
+        mc:Ignorable="d"
+        Title="Метро Київ" Height="655.121" Width="671.342"
+        ResizeMode="CanMinimize" Background="White" Icon="pack://siteoforigin:,,,/Resources/icon.ico"
+        WindowStartupLocation = "CenterScreen" >
+    
+    <Grid Margin="0,0,0.4,658">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Canvas x:Name="Canvas" HorizontalAlignment="Left" Height="600" Margin="0,24,0,-624" 
+                VerticalAlignment="Top" Width="664" Grid.ColumnSpan="2"
+                MouseRightButtonUp="Canvas_MouseRightButtonUp">
+            <Canvas.Background>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/map.jpg"/>
+            </Canvas.Background>
+        </Canvas>
+        <Menu x:Name="Menu" Margin="0,0,1,-19" Grid.ColumnSpan="2">
+            <MenuItem Header="Файл&#xD;&#xA;">
+                <MenuItem Header="Довідка" Click="MenuHelp_Click"></MenuItem>
+                <Separator></Separator>
+                <MenuItem Header="Вихід" Click="MenuExit_Click"></MenuItem>
+            </MenuItem>
+        </Menu>
+    </Grid>
+</Window>
